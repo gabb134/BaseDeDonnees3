@@ -63,7 +63,7 @@ namespace Labo1
             //	select 'Nombre d''hôtels à Montréal: '+convert(varchar,count(hotNom)) from hotel where hotNom like '%Montréal%'
 
 
-            /  
+              
                 String maRequeteSql = "select count(hotNom) from hotel where hotNom like '%Montréal%'";
                 SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
                 int compteur = (int)maCommande.ExecuteScalar();
