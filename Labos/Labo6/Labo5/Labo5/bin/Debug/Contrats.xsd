@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="BDVoyagesMarreroDataSet" targetNamespace="http://tempuri.org/BDVoyagesMarreroDataSet1.xsd" xmlns:mstns="http://tempuri.org/BDVoyagesMarreroDataSet1.xsd" xmlns="http://tempuri.org/BDVoyagesMarreroDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="BDVoyagesMarreroDataSet" msdata:IsDataSet="true" msdata:MainDataTable="http_x003A__x002F__x002F_tempuri.org_x002F_BDVoyagesMarreroDataSet1.xsd_x003A_contrat" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="contrat">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="conNo" type="xs:decimal" />
+              <xs:element name="conDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="conAcompte" type="xs:decimal" minOccurs="0" />
+              <xs:element name="conMontant" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ConPaye" type="xs:decimal" minOccurs="0" />
+              <xs:element name="conTypeOcc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="empNo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="voyNo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cliNo" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:contrat" />
+      <xs:field xpath="mstns:conNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

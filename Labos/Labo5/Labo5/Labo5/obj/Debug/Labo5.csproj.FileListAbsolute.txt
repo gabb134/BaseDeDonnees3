@@ -1,0 +1,23 @@
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\bin\Debug\Labo5.exe.config
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\bin\Debug\Labo5.exe
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\bin\Debug\Labo5.pdb
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.csprojAssemblyReference.cache
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.frmMenu.resources
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.Properties.Resources.resources
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.csproj.GenerateResource.cache
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.exe
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.pdb
+C:\Users\Gabriel Marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.frmListeDeValeurs.resources
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\bin\Debug\Labo5.exe.config
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\bin\Debug\Labo5.exe
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\bin\Debug\Labo5.pdb
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.frmListeDeValeurs.resources
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.frmMenu.resources
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.Properties.Resources.resources
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.csproj.GenerateResource.cache
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.csproj.CoreCompileInputs.cache
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.exe
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.pdb
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.frmListeDeValeursTab.resources
+C:\Users\cg.marrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo5\Labo5\Labo5\obj\Debug\Labo5.frmChampsCalcules.resources
