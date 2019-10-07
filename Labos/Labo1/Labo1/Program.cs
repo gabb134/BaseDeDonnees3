@@ -37,7 +37,7 @@ namespace Labo1
 
              //B.
             
-            String maRequeteSql1 = "select conNo,conDate,empNom from contrat c inner join employe e on e.empNo = c.empNo";
+          /*  String maRequeteSql1 = "select conNo,conDate,empNom from contrat c inner join employe e on e.empNo = c.empNo";
             SqlCommand maCommande1 = new SqlCommand(maRequeteSql1, maConnexion);
             SqlDataReader monReader1 = maCommande1.ExecuteReader();
             Console.WriteLine("Requête B ************************************************");
@@ -46,10 +46,10 @@ namespace Labo1
                 Console.WriteLine(monReader1[0] + ", " + monReader1["conDate"] + ", " + monReader1["empNom"]);
             }
     
-            Console.ReadKey(); 
+            Console.ReadKey(); */
             //C
             
-             String maRequeteSql = "select c.empNo,empNom,count(c.empNo) from contrat c inner join employe e on e.empNo = c.empNo group by c.empNo,empNom";
+          /*   String maRequeteSql = "select c.empNo,empNom,count(c.empNo) from contrat c inner join employe e on e.empNo = c.empNo group by c.empNo,empNom";
              SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
              SqlDataReader monReader = maCommande.ExecuteReader();
              Console.WriteLine("Requête C ************************************************");
@@ -58,18 +58,18 @@ namespace Labo1
                  Console.WriteLine(monReader[0] + ", " + monReader["empNom"] + ", " + monReader[2]);
              }
             
-             Console.ReadKey();
+             Console.ReadKey();*/
             //D. 1.
             //	select 'Nombre d''hôtels à Montréal: '+convert(varchar,count(hotNom)) from hotel where hotNom like '%Montréal%'
 
 
               
-                String maRequeteSql = "select count(hotNom) from hotel where hotNom like '%Montréal%'";
+             /*   String maRequeteSql = "select count(hotNom) from hotel where hotNom like '%Montréal%'";
                 SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
                 int compteur = (int)maCommande.ExecuteScalar();
                 Console.WriteLine("Requête D *****************************");
                 Console.WriteLine("Nombre d''hôtels à Montréal: "+compteur);
-                Console.ReadKey();
+                Console.ReadKey();*/
 
             //D. 2.
 
@@ -80,7 +80,7 @@ namespace Labo1
             //d’arrivée et la destination de tous les voyages à destination de Montréal
 
             
-            String maRequeteSql = "select voyNo, voyDateDepart,voyDateArrive,voyDestination from voyage where voyDestination = 'Montréal'";
+        /*   String maRequeteSql = "select voyNo, voyDateDepart,voyDateArrive,voyDestination from voyage where voyDestination = 'Montréal'";
             SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
             SqlDataReader monReader = maCommande.ExecuteReader();
             Console.WriteLine("Requête E ***********************************");
@@ -90,13 +90,13 @@ namespace Labo1
             }
 
         
-            Console.ReadKey();
+            Console.ReadKey();*/
 
             //F. Augmentez le tarif simple de 10% du tarif actuel pour tous les voyages à
             // destination de Montréal(affichez le nombre d’enregistrements qui ont
             //été mises à jour).Vous devez utiliser ExecuteNonQuery.Vérifiez si cela a
             //bien été fait.
-
+/*
             String maRequeteSQL1 = "update voyage set tarifSimple = tarifTriple * 1.10 where voyDestination = 'Montréal'";
              SqlCommand maCommande1 = new SqlCommand(maRequeteSQL1, maConnexion);
              int nbLignesModifies = maCommande1.ExecuteNonQuery();
@@ -106,7 +106,7 @@ namespace Labo1
 
             /*G. A l’aide d’un DataReader, pour chaque employé qui a des contrats,
            affichez le numéro de l’employé et le montant total de ses contrats. */
-               String maRequeteSql = "select empNo,sum(conMontant) from contrat group by empNo";
+         /*      String maRequeteSql = "select empNo,sum(conMontant) from contrat group by empNo";
                SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
                SqlDataReader monReader = maCommande.ExecuteReader();
                Console.WriteLine("Requêt G ***********************************");
@@ -115,13 +115,13 @@ namespace Labo1
                    Console.WriteLine(monReader[0]+", "+monReader[1]);
                }
 
-                  monReader.Close();
+                  monReader.Close();*/
 
 
             /*H.  Affichez le nom de l’hôtel affecté à un numéro de voyage entré par
                  l’utilisateur. Utiliser un paramètre SQL Serveur en entrée. 
                              */
-                 Console.Write("Entrez un numéro d'employé: ");
+               /*  Console.Write("Entrez un numéro d'employé: ");
                  String num = Console.ReadLine().Trim();
 
                  String maRequeteSql = "select hotNom,h.hotno from hotel h inner join voyage v on h.hotNo = v.hotno where  v.voyNo like @noVoyageur";
@@ -135,7 +135,7 @@ namespace Labo1
                  if (numVoyage == null)
                      Console.WriteLine("Numéro de voyage inéxistant!");
                  else
-                     Console.WriteLine("Hôtel: " + numVoyage);
+                     Console.WriteLine("Hôtel: " + numVoyage);*/
 
 
 
@@ -144,11 +144,11 @@ namespace Labo1
              nombre d’enregistrements qui ont été ajoutées. Vous devez utiliser
                ExecuteNonQuery. */
 
-              String maRequeteSql = "insert into faitLeVoyage values(444014,123024)";
+             /* String maRequeteSql = "insert into faitLeVoyage values(444014,123024)";
               SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
               Console.WriteLine("Requête I ****************************************************");
               int nbLignesModifies = maCommande.ExecuteNonQuery();
-              Console.WriteLine("Nombre de lignes ajoutées: "+ nbLignesModifies.ToString());
+              Console.WriteLine("Nombre de lignes ajoutées: "+ nbLignesModifies.ToString());*/
 
 
 
@@ -158,25 +158,25 @@ namespace Labo1
         utiliser ExecuteNonQuery. 
             */
 
-            String maRequeteSql = "delete from faitLeVoyage where conNo = 444014 and cliNo = 123024";
+          /*  String maRequeteSql = "delete from faitLeVoyage where conNo = 444014 and cliNo = 123024";
              SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
              Console.WriteLine("Requête J ****************************************************");
              int nbLignesModifies = maCommande.ExecuteNonQuery();
              Console.WriteLine("Nombre de lignes supprimées: " + nbLignesModifies);
-
+             */
 
 
 
             /*K.*/
-            Console.WriteLine("Requête K ****************************************************");
+       /*     Console.WriteLine("Requête K ****************************************************");
             Console.Write("Entrez un numéro d'employé: ");
             String num = Console.ReadLine().Trim();
             String maRequeteSql = "select empPrenom,empNom from employe where empNo = "+num;
-            SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);
+            SqlCommand maCommande = new SqlCommand(maRequeteSql, maConnexion);*/
          //   SqlParameter monParametreSQL = new SqlParameter("@employe", num);
           //  maCommande.Parameters.Add(monParametreSQL);
 
-            dynamic employe = maCommande.ExecuteReader();
+           /* dynamic employe = maCommande.ExecuteReader();
 
             if (employe.Read() == false)
                 Console.WriteLine("Numéro d'employé inéxistant!");
@@ -196,7 +196,7 @@ namespace Labo1
             }   
 
 
-            Console.ReadKey();
+            Console.ReadKey();*/
                 maConnexion.Close();
         }
     }

@@ -16,3 +16,10 @@ C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3
 C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo1\Labo1\obj\Debug\Labo1.csproj.CoreCompileInputs.cache
 C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo1\Labo1\obj\Debug\Labo1.exe
 C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo1\Labo1\obj\Debug\Labo1.pdb
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo1\Labo1\bin\Debug\Labo1.exe.config
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo1\Labo1\bin\Debug\Labo1.exe
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo1\Labo1\bin\Debug\Labo1.pdb
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo1\Labo1\obj\Debug\Labo1.csprojAssemblyReference.cache
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo1\Labo1\obj\Debug\Labo1.csproj.CoreCompileInputs.cache
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo1\Labo1\obj\Debug\Labo1.exe
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo1\Labo1\obj\Debug\Labo1.pdb
