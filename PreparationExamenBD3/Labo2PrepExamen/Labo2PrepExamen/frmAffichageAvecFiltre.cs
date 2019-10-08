@@ -79,5 +79,10 @@ namespace Labo2PrepExamen
             }
 
         }
+
+        private void nomToolStripLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

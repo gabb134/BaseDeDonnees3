@@ -4854,16 +4854,23 @@ SELECT conNo, conDate, conAcompte, conMontant, ConPaye, conTypeOcc, empNo, voyNo
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT conNo, conDate, conAcompte, conMontant, ConPaye, conTypeOcc, empNo, voyNo," +
-                " cliNo FROM dbo.contrat";
+                " cliNo FROM dbo.contrat\r\nwhere empNo = @empNo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empNo", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "empNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BDVoyagesMarreroDataSet.contratDataTable dataTable) {
+        public virtual int Fill(BDVoyagesMarreroDataSet.contratDataTable dataTable, global::System.Nullable<decimal> empNo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((empNo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(empNo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -4875,8 +4882,14 @@ SELECT conNo, conDate, conAcompte, conMontant, ConPaye, conTypeOcc, empNo, voyNo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BDVoyagesMarreroDataSet.contratDataTable GetData() {
+        public virtual BDVoyagesMarreroDataSet.contratDataTable GetData(global::System.Nullable<decimal> empNo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((empNo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(empNo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             BDVoyagesMarreroDataSet.contratDataTable dataTable = new BDVoyagesMarreroDataSet.contratDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

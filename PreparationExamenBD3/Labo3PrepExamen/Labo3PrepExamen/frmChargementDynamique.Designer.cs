@@ -1,6 +1,6 @@
 ﻿namespace Labo3PrepExamen
 {
-    partial class frmMVC
+    partial class frmChargementDynamique
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label empNomLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMVC));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChargementDynamique));
             this.bDVoyagesMarreroDataSet = new Labo3PrepExamen.BDVoyagesMarreroDataSet();
             this.employeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeTableAdapter = new Labo3PrepExamen.BDVoyagesMarreroDataSetTableAdapters.employeTableAdapter();
             this.tableAdapterManager = new Labo3PrepExamen.BDVoyagesMarreroDataSetTableAdapters.TableAdapterManager();
+            this.contratTableAdapter = new Labo3PrepExamen.BDVoyagesMarreroDataSetTableAdapters.contratTableAdapter();
             this.employeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -48,7 +48,10 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.employeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.employeDataGridView = new System.Windows.Forms.DataGridView();
+            this.contratBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.voyageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.voyageTableAdapter = new Labo3PrepExamen.BDVoyagesMarreroDataSetTableAdapters.voyageTableAdapter();
+            this.contratDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,36 +60,28 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empNomTextBox = new System.Windows.Forms.TextBox();
-            this.txt = new System.Windows.Forms.TextBox();
-            this.btnModifierNom = new System.Windows.Forms.Button();
-            this.btnSuspendreLiaison = new System.Windows.Forms.Button();
-            this.btnReprendreLiaison = new System.Windows.Forms.Button();
-            this.btnPrecedent = new System.Windows.Forms.Button();
-            this.btnPremier = new System.Windows.Forms.Button();
-            this.btnDernier = new System.Windows.Forms.Button();
-            this.btnSuivant = new System.Windows.Forms.Button();
-            this.btnQuantite = new System.Windows.Forms.Button();
-            this.btnPosition = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            empNomLabel = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bDVoyagesMarreroDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingNavigator)).BeginInit();
             this.employeBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contratBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voyageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contratDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // empNomLabel
-            // 
-            empNomLabel.AutoSize = true;
-            empNomLabel.Location = new System.Drawing.Point(140, 83);
-            empNomLabel.Name = "empNomLabel";
-            empNomLabel.Size = new System.Drawing.Size(55, 13);
-            empNomLabel.TabIndex = 2;
-            empNomLabel.Text = "emp Nom:";
             // 
             // bDVoyagesMarreroDataSet
             // 
@@ -97,6 +92,7 @@
             // 
             this.employeBindingSource.DataMember = "employe";
             this.employeBindingSource.DataSource = this.bDVoyagesMarreroDataSet;
+            this.employeBindingSource.PositionChanged += new System.EventHandler(this.employeBindingSource_PositionChanged);
             // 
             // employeTableAdapter
             // 
@@ -106,12 +102,16 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.clientTableAdapter = null;
-            this.tableAdapterManager.contratTableAdapter = null;
+            this.tableAdapterManager.contratTableAdapter = this.contratTableAdapter;
             this.tableAdapterManager.employeTableAdapter = this.employeTableAdapter;
             this.tableAdapterManager.faitLeVoyageTableAdapter = null;
             this.tableAdapterManager.hotelTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Labo3PrepExamen.BDVoyagesMarreroDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.voyageTableAdapter = null;
+            // 
+            // contratTableAdapter
+            // 
+            this.contratTableAdapter.ClearBeforeFill = true;
             // 
             // employeBindingNavigator
             // 
@@ -139,7 +139,7 @@
             this.employeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.employeBindingNavigator.Name = "employeBindingNavigator";
             this.employeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employeBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.employeBindingNavigator.Size = new System.Drawing.Size(910, 25);
             this.employeBindingNavigator.TabIndex = 0;
             this.employeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -237,12 +237,25 @@
             this.employeBindingNavigatorSaveItem.Text = "Enregistrer les données";
             this.employeBindingNavigatorSaveItem.Click += new System.EventHandler(this.employeBindingNavigatorSaveItem_Click);
             // 
-            // employeDataGridView
+            // contratBindingSource
             // 
-            this.employeDataGridView.AutoGenerateColumns = false;
-            this.employeDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.employeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.contratBindingSource.DataMember = "contrat";
+            this.contratBindingSource.DataSource = this.bDVoyagesMarreroDataSet;
+            // 
+            // voyageBindingSource
+            // 
+            this.voyageBindingSource.DataMember = "voyage";
+            this.voyageBindingSource.DataSource = this.bDVoyagesMarreroDataSet;
+            // 
+            // voyageTableAdapter
+            // 
+            this.voyageTableAdapter.ClearBeforeFill = true;
+            // 
+            // contratDataGridView
+            // 
+            this.contratDataGridView.AutoGenerateColumns = false;
+            this.contratDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.contratDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -250,227 +263,188 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.employeDataGridView.DataSource = this.employeBindingSource;
-            this.employeDataGridView.Location = new System.Drawing.Point(93, 139);
-            this.employeDataGridView.Name = "employeDataGridView";
-            this.employeDataGridView.RowHeadersWidth = 20;
-            this.employeDataGridView.Size = new System.Drawing.Size(598, 185);
-            this.employeDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.contratDataGridView.DataSource = this.contratBindingSource;
+            this.contratDataGridView.Location = new System.Drawing.Point(590, 164);
+            this.contratDataGridView.Name = "contratDataGridView";
+            this.contratDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.contratDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "empNo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "empNo";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "conNo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "conNo";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "empPrenom";
-            this.dataGridViewTextBoxColumn2.HeaderText = "empPrenom";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "conDate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "conDate";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "empNom";
-            this.dataGridViewTextBoxColumn3.HeaderText = "empNom";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "conAcompte";
+            this.dataGridViewTextBoxColumn3.HeaderText = "conAcompte";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "empEmploi";
-            this.dataGridViewTextBoxColumn4.HeaderText = "empEmploi";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "conMontant";
+            this.dataGridViewTextBoxColumn4.HeaderText = "conMontant";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "empSal";
-            this.dataGridViewTextBoxColumn5.HeaderText = "empSal";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ConPaye";
+            this.dataGridViewTextBoxColumn5.HeaderText = "ConPaye";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "empComm";
-            this.dataGridViewTextBoxColumn6.HeaderText = "empComm";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "conTypeOcc";
+            this.dataGridViewTextBoxColumn6.HeaderText = "conTypeOcc";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "empSup";
-            this.dataGridViewTextBoxColumn7.HeaderText = "empSup";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "empNo";
+            this.dataGridViewTextBoxColumn7.HeaderText = "empNo";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "empBureau";
-            this.dataGridViewTextBoxColumn8.HeaderText = "empBureau";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "voyNo";
+            this.dataGridViewTextBoxColumn8.HeaderText = "voyNo";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // empNomTextBox
+            // dataGridViewTextBoxColumn9
             // 
-            this.empNomTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeBindingSource, "empNom", true));
-            this.empNomTextBox.Location = new System.Drawing.Point(201, 80);
-            this.empNomTextBox.Name = "empNomTextBox";
-            this.empNomTextBox.Size = new System.Drawing.Size(100, 20);
-            this.empNomTextBox.TabIndex = 3;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "cliNo";
+            this.dataGridViewTextBoxColumn9.HeaderText = "cliNo";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // txt
+            // employeDataGridView
             // 
-            this.txt.Location = new System.Drawing.Point(457, 79);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(100, 20);
-            this.txt.TabIndex = 4;
+            this.employeDataGridView.AutoGenerateColumns = false;
+            this.employeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.employeDataGridView.DataSource = this.employeBindingSource;
+            this.employeDataGridView.Location = new System.Drawing.Point(57, 164);
+            this.employeDataGridView.Name = "employeDataGridView";
+            this.employeDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.employeDataGridView.TabIndex = 2;
             // 
-            // btnModifierNom
+            // dataGridViewTextBoxColumn10
             // 
-            this.btnModifierNom.Location = new System.Drawing.Point(336, 77);
-            this.btnModifierNom.Name = "btnModifierNom";
-            this.btnModifierNom.Size = new System.Drawing.Size(110, 23);
-            this.btnModifierNom.TabIndex = 5;
-            this.btnModifierNom.Text = "Modifier 1er nom";
-            this.btnModifierNom.UseVisualStyleBackColor = true;
-            this.btnModifierNom.Click += new System.EventHandler(this.btnModifierNom_Click);
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "empNo";
+            this.dataGridViewTextBoxColumn10.HeaderText = "empNo";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // btnSuspendreLiaison
+            // dataGridViewTextBoxColumn11
             // 
-            this.btnSuspendreLiaison.Location = new System.Drawing.Point(221, 347);
-            this.btnSuspendreLiaison.Name = "btnSuspendreLiaison";
-            this.btnSuspendreLiaison.Size = new System.Drawing.Size(145, 23);
-            this.btnSuspendreLiaison.TabIndex = 6;
-            this.btnSuspendreLiaison.Text = "Suspendre liaison";
-            this.btnSuspendreLiaison.UseVisualStyleBackColor = true;
-            this.btnSuspendreLiaison.Click += new System.EventHandler(this.btnSuspendreLiaison_Click);
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "empPrenom";
+            this.dataGridViewTextBoxColumn11.HeaderText = "empPrenom";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // btnReprendreLiaison
+            // dataGridViewTextBoxColumn12
             // 
-            this.btnReprendreLiaison.Location = new System.Drawing.Point(388, 347);
-            this.btnReprendreLiaison.Name = "btnReprendreLiaison";
-            this.btnReprendreLiaison.Size = new System.Drawing.Size(145, 23);
-            this.btnReprendreLiaison.TabIndex = 7;
-            this.btnReprendreLiaison.Text = "Reprendre liaison";
-            this.btnReprendreLiaison.UseVisualStyleBackColor = true;
-            this.btnReprendreLiaison.Click += new System.EventHandler(this.btnReprendreLiaison_Click);
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "empNom";
+            this.dataGridViewTextBoxColumn12.HeaderText = "empNom";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // btnPrecedent
+            // dataGridViewTextBoxColumn13
             // 
-            this.btnPrecedent.Location = new System.Drawing.Point(164, 386);
-            this.btnPrecedent.Name = "btnPrecedent";
-            this.btnPrecedent.Size = new System.Drawing.Size(108, 23);
-            this.btnPrecedent.TabIndex = 9;
-            this.btnPrecedent.Text = "Employé précédent";
-            this.btnPrecedent.UseVisualStyleBackColor = true;
-            this.btnPrecedent.Click += new System.EventHandler(this.btnPrecedent_Click);
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "empEmploi";
+            this.dataGridViewTextBoxColumn13.HeaderText = "empEmploi";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // btnPremier
+            // dataGridViewTextBoxColumn14
             // 
-            this.btnPremier.Location = new System.Drawing.Point(51, 386);
-            this.btnPremier.Name = "btnPremier";
-            this.btnPremier.Size = new System.Drawing.Size(108, 23);
-            this.btnPremier.TabIndex = 8;
-            this.btnPremier.Text = "premier employé";
-            this.btnPremier.UseVisualStyleBackColor = true;
-            this.btnPremier.Click += new System.EventHandler(this.btnPremier_Click);
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "empSal";
+            this.dataGridViewTextBoxColumn14.HeaderText = "empSal";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // btnDernier
+            // dataGridViewTextBoxColumn15
             // 
-            this.btnDernier.Location = new System.Drawing.Point(391, 386);
-            this.btnDernier.Name = "btnDernier";
-            this.btnDernier.Size = new System.Drawing.Size(108, 23);
-            this.btnDernier.TabIndex = 11;
-            this.btnDernier.Text = "Dernier employé";
-            this.btnDernier.UseVisualStyleBackColor = true;
-            this.btnDernier.Click += new System.EventHandler(this.btnDernier_Click);
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "empComm";
+            this.dataGridViewTextBoxColumn15.HeaderText = "empComm";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // btnSuivant
+            // dataGridViewTextBoxColumn16
             // 
-            this.btnSuivant.Location = new System.Drawing.Point(278, 386);
-            this.btnSuivant.Name = "btnSuivant";
-            this.btnSuivant.Size = new System.Drawing.Size(108, 23);
-            this.btnSuivant.TabIndex = 10;
-            this.btnSuivant.Text = "Employé suivant";
-            this.btnSuivant.UseVisualStyleBackColor = true;
-            this.btnSuivant.Click += new System.EventHandler(this.btnSuivant_Click);
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "empSup";
+            this.dataGridViewTextBoxColumn16.HeaderText = "empSup";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
-            // btnQuantite
+            // dataGridViewTextBoxColumn17
             // 
-            this.btnQuantite.Location = new System.Drawing.Point(641, 386);
-            this.btnQuantite.Name = "btnQuantite";
-            this.btnQuantite.Size = new System.Drawing.Size(108, 23);
-            this.btnQuantite.TabIndex = 13;
-            this.btnQuantite.Text = "Nombre d\'employés";
-            this.btnQuantite.UseVisualStyleBackColor = true;
-            this.btnQuantite.Click += new System.EventHandler(this.btnQuantite_Click);
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "empBureau";
+            this.dataGridViewTextBoxColumn17.HeaderText = "empBureau";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
-            // btnPosition
+            // label1
             // 
-            this.btnPosition.Location = new System.Drawing.Point(511, 386);
-            this.btnPosition.Name = "btnPosition";
-            this.btnPosition.Size = new System.Drawing.Size(124, 23);
-            this.btnPosition.TabIndex = 12;
-            this.btnPosition.Text = "Position de l\'employé";
-            this.btnPosition.UseVisualStyleBackColor = true;
-            this.btnPosition.Click += new System.EventHandler(this.btnPosition_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
             // 
-            // button1
+            // label2
             // 
-            this.button1.Location = new System.Drawing.Point(310, 424);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Ajouter un employé";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(156, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Employés";
             // 
-            // button2
+            // label3
             // 
-            this.button2.Location = new System.Drawing.Point(117, 424);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Actualiser l\'employé courant";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(693, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Contrats";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(479, 424);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Supprimer l\'employé courant";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // frmMVC
+            // frmChargementDynamique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnQuantite);
-            this.Controls.Add(this.btnPosition);
-            this.Controls.Add(this.btnDernier);
-            this.Controls.Add(this.btnSuivant);
-            this.Controls.Add(this.btnPrecedent);
-            this.Controls.Add(this.btnPremier);
-            this.Controls.Add(this.btnReprendreLiaison);
-            this.Controls.Add(this.btnSuspendreLiaison);
-            this.Controls.Add(this.btnModifierNom);
-            this.Controls.Add(this.txt);
-            this.Controls.Add(empNomLabel);
-            this.Controls.Add(this.empNomTextBox);
+            this.ClientSize = new System.Drawing.Size(910, 663);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.employeDataGridView);
+            this.Controls.Add(this.contratDataGridView);
             this.Controls.Add(this.employeBindingNavigator);
-            this.Name = "frmMVC";
-            this.Text = "v";
-            this.Load += new System.EventHandler(this.frmMVC_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.Name = "frmChargementDynamique";
+            this.Text = "frmChargementDynamique";
+            this.Load += new System.EventHandler(this.frmChargementDynamique_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bDVoyagesMarreroDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingNavigator)).EndInit();
             this.employeBindingNavigator.ResumeLayout(false);
             this.employeBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contratBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voyageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contratDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -496,7 +470,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton employeBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView employeDataGridView;
+        private BDVoyagesMarreroDataSetTableAdapters.contratTableAdapter contratTableAdapter;
+        private System.Windows.Forms.BindingSource contratBindingSource;
+        private System.Windows.Forms.BindingSource voyageBindingSource;
+        private BDVoyagesMarreroDataSetTableAdapters.voyageTableAdapter voyageTableAdapter;
+        private System.Windows.Forms.DataGridView contratDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -505,19 +483,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.TextBox empNomTextBox;
-        private System.Windows.Forms.TextBox txt;
-        private System.Windows.Forms.Button btnModifierNom;
-        private System.Windows.Forms.Button btnSuspendreLiaison;
-        private System.Windows.Forms.Button btnReprendreLiaison;
-        private System.Windows.Forms.Button btnPrecedent;
-        private System.Windows.Forms.Button btnPremier;
-        private System.Windows.Forms.Button btnDernier;
-        private System.Windows.Forms.Button btnSuivant;
-        private System.Windows.Forms.Button btnQuantite;
-        private System.Windows.Forms.Button btnPosition;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridView employeDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

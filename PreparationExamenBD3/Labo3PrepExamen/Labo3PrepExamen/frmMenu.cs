@@ -14,6 +14,7 @@ namespace Labo3PrepExamen
     {
 
         frmMVC frmmvc = new frmMVC();
+        frmChargementDynamique frmChargement = new frmChargementDynamique();
 
         public frmMenu()
         {
@@ -24,7 +25,14 @@ namespace Labo3PrepExamen
         {
             this.Hide();
             frmmvc.ShowDialog();
-            this.ShowDialog();
+            this.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmChargement.ShowDialog();
+            this.Show();
         }
     }
 }

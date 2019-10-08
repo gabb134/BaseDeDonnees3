@@ -9,3 +9,15 @@ C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepE
 C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.pdb
 C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.frmMenu.resources
 C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.frmMVC.resources
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.csprojAssemblyReference.cache
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.frmMenu.resources
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.frmMVC.resources
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.Properties.Resources.resources
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.csproj.GenerateResource.cache
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.csproj.CoreCompileInputs.cache
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.exe
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.pdb
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\bin\Debug\Labo3PrepExamen.exe.config
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\bin\Debug\Labo3PrepExamen.exe
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\bin\Debug\Labo3PrepExamen.pdb
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.frmChargementDynamique.resources

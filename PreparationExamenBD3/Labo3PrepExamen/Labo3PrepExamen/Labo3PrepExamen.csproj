@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDVoyagesMarreroDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmChargementDynamique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargementDynamique.Designer.cs">
+      <DependentUpon>frmChargementDynamique.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmChargementDynamique.resx">
+      <DependentUpon>frmChargementDynamique.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>

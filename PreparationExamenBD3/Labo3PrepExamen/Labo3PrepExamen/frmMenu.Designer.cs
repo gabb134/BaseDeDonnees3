@@ -66,6 +66,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(272, 22);
             this.toolStripMenuItem1.Text = "Chargement dynamique des données";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // frmMenu
             // 
