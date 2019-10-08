@@ -1,0 +1,15 @@
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\bin\Debug\Labo2PrepExamen.exe.config
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\bin\Debug\Labo2PrepExamen.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\bin\Debug\Labo2PrepExamen.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.csprojAssemblyReference.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.frmEnregistrement.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.frmMenu.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.Properties.Resources.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.csproj.GenerateResource.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.csproj.CoreCompileInputs.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.frmTabulaire.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.frmPlusieursTables.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.frmMaitreDetail.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo2PrepExamen\Labo2PrepExamen\obj\Debug\Labo2PrepExamen.frmAffichageAvecFiltre.resources

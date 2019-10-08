@@ -1,0 +1,9 @@
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\bin\Debug\Labo3PrepExamen.exe.config
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\bin\Debug\Labo3PrepExamen.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\bin\Debug\Labo3PrepExamen.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.csprojAssemblyReference.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.Properties.Resources.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.csproj.GenerateResource.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.csproj.CoreCompileInputs.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.pdb

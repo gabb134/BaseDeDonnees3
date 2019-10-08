@@ -37,3 +37,16 @@ C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3
 C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\bin\Debug\Labo4.exe.config
 C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\bin\Debug\Labo4.exe
 C:\Users\GabrielMarrero\OneDrive - Cegep Gerald-Godin\Automne2019\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\bin\Debug\Labo4.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\bin\Debug\Labo4.exe.config
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\bin\Debug\Labo4.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\bin\Debug\Labo4.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.csprojAssemblyReference.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.frmAffichageParProgrammation.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.frmConnexionClient.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.frmMenu.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.frmReservationVoyages.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.Properties.Resources.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.csproj.GenerateResource.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.csproj.CoreCompileInputs.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo4\Labo4\Labo4\obj\Debug\Labo4.pdb
