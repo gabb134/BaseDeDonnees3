@@ -7,3 +7,5 @@ C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepE
 C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.csproj.CoreCompileInputs.cache
 C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.exe
 C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.frmMenu.resources
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\PreparationExamenBD3\Labo3PrepExamen\Labo3PrepExamen\obj\Debug\Labo3PrepExamen.frmMVC.resources

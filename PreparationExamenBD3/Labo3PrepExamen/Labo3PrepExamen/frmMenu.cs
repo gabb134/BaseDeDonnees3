@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Labo3PrepExamen
 {
-    public partial class Form1 : Form
+    public partial class frmMenu : Form
     {
-        public Form1()
+
+        frmMVC frmmvc = new frmMVC();
+
+        public frmMenu()
         {
             InitializeComponent();
+        }
+
+        private void modèleMVCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmmvc.ShowDialog();
+            this.ShowDialog();
         }
     }
 }
