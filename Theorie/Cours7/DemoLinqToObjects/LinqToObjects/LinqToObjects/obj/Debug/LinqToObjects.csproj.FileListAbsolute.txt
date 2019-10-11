@@ -1,0 +1,15 @@
+C:\Aut2016\Cours 5B6\cours\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe.config
+C:\Aut2016\Cours 5B6\cours\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.csprojResolveAssemblyReference.cache
+C:\Aut2016\Cours 5B6\cours\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe
+C:\Aut2016\Cours 5B6\cours\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.pdb
+C:\Aut2016\Cours 5B6\cours\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.exe
+C:\Aut2016\Cours 5B6\cours\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.pdb
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe.config
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.exe
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.pdb
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.csprojResolveAssemblyReference.cache
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.pdb
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\POur Laea\Cours 8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe.config
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\POur Laea\Cours 8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.exe
+C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\POur Laea\Cours 8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.pdb
