@@ -13,3 +13,10 @@ C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\D
 C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\POur Laea\Cours 8\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe.config
 C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\POur Laea\Cours 8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.exe
 C:\Users\F.Cherief\Dropbox (Informatique)\Ferroudja Aut2017\Cours 5B6\cours  8\POur Laea\Cours 8\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Theorie\Cours7\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe.config
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Theorie\Cours7\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Theorie\Cours7\DemoLinqToObjects\LinqToObjects\LinqToObjects\bin\Debug\LinqToObjects.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Theorie\Cours7\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.csprojAssemblyReference.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Theorie\Cours7\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.csproj.CoreCompileInputs.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Theorie\Cours7\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Theorie\Cours7\DemoLinqToObjects\LinqToObjects\LinqToObjects\obj\Debug\LinqToObjects.pdb
