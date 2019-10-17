@@ -1,0 +1,7 @@
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo7\Labo7\Labo7\bin\Debug\Labo7.exe.config
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo7\Labo7\Labo7\bin\Debug\Labo7.exe
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo7\Labo7\Labo7\bin\Debug\Labo7.pdb
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo7\Labo7\Labo7\obj\Debug\Labo7.csprojAssemblyReference.cache
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo7\Labo7\Labo7\obj\Debug\Labo7.csproj.CoreCompileInputs.cache
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo7\Labo7\Labo7\obj\Debug\Labo7.exe
+C:\Users\cg.marrero\Documents\BaseDeDonnees3\Labos\Labo7\Labo7\Labo7\obj\Debug\Labo7.pdb

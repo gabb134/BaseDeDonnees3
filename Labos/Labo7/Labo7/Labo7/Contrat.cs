@@ -10,19 +10,19 @@ namespace Labo7
     {
 
         public int intNumero { get; private set; }
-        public int intMontant { get; private set; }
+        public double dblMontant { get; private set; }
         public  int intNumEmploye { get; private set; }
 
-
+        
         public Contrat()
         {
 
         }
 
-        public Contrat(int intNumero,int intMontant,int intNumEmploye)
+        public Contrat(int intNumero,double dblMontant, int intNumEmploye)
         {
             this.intNumero = intNumero;
-            this.intMontant = intMontant;
+            this.dblMontant = dblMontant;
             this.intNumEmploye = intNumEmploye;
         }
 

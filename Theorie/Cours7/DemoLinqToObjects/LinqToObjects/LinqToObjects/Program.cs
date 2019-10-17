@@ -69,7 +69,7 @@ namespace LinqToObjects
             Console.ReadKey();
            /***********************************************************************************/
 
-            /*   Requête 2
+            //   Requête 2
             // La projection: on détermine ce qu'on veut avoir
             // Utilisation d'une classes anonyme
             
@@ -176,7 +176,7 @@ namespace LinqToObjects
             Console.ReadKey();
             /************************************************************************************/
 
-            /* Requête 6
+            /// Requête 6
             // Les jointures externes: join..on..equals..into et 
             // imbrication des ensembles (from..in imbriqués)
             // Jointure externe: Chaque prof de l'ensemble des profs est relié à un ensemble de cours

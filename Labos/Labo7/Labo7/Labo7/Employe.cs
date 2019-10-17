@@ -12,7 +12,7 @@ namespace Labo7
        public int intNumero { get; private set; }
        public string strPrenom { get; private set; }
        public string strNom { get; private set; }
-       public int intSalaire { get; private set; }
+       public double dblSalaire { get; private set; }
     
 
 
@@ -21,12 +21,12 @@ namespace Labo7
 
         }
 
-        public Employe(int intNumero,string strPrenom,string strNom,int intSalaire)
+        public Employe(int intNumero,string strPrenom,string strNom, double dblSalaire)
         {
             this.intNumero = intNumero;
             this.strPrenom = strPrenom;
             this.strNom = strNom;
-            this.intSalaire = intSalaire;
+            this.dblSalaire = dblSalaire;
         }
 
         static void main(string[] args)
