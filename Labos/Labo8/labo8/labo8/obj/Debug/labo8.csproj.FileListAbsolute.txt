@@ -1,0 +1,7 @@
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo8\labo8\labo8\obj\Debug\labo8.csprojAssemblyReference.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo8\labo8\labo8\obj\Debug\labo8.csproj.CoreCompileInputs.cache
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo8\labo8\labo8\bin\Debug\labo8.exe.config
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo8\labo8\labo8\bin\Debug\labo8.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo8\labo8\labo8\bin\Debug\labo8.pdb
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo8\labo8\labo8\obj\Debug\labo8.exe
+C:\Users\GabrielMarrero\Documents\BaseDeDonnees3\Labos\Labo8\labo8\labo8\obj\Debug\labo8.pdb

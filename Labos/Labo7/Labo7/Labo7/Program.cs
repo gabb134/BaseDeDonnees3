@@ -154,13 +154,187 @@ namespace Labo7
 
             /************************************************************************************/
 
-            //9- Affichez toutes les informations sur les contrats (Rendu la)
+            /*9- Affichez toutes les informations sur les contrats 
             //en les regroupant par numéro d’employé.
 
             var infoSurLesContrat = from unContrat
                                     in lstContrats
-                                    //order by
+                                    orderby unContrat.intNumEmploye
                                     select unContrat;
+
+            Console.WriteLine("Affichez toutes les informations sur les contrats en les regroupant par numéro d’employé");
+            foreach(Contrat unCon in infoSurLesContrat)
+            {
+                Console.WriteLine("{0}: {1}, {2}",unCon.intNumEmploye,unCon.dblMontant,unCon.intNumero);
+            }
+            Console.ReadKey();
+            /************************************************************************************/
+
+            /*10- En regroupant les contrats en deux catégories : gros montant (montant  supérieur à 500)  (Demander au prof)
+            //et petit montant pour les autres, affichez le numéro et le montant de tous les contrats
+
+            var regrouperContrat = from unContrat
+                                   in lstContrats
+                                   group unContrat by (unContrat.dblMontant <= 500);
+
+            Console.WriteLine("Gros montant");
+            
+            foreach(var groupMontant in regrouperContrat)
+            {
+                if (!groupMontant.Key)
+                {
+                    foreach(var montant in groupMontant)
+                    {
+                        Console.WriteLine("{0}", montant.dblMontant);
+                    }
+                  
+                }
+            }
+
+            Console.WriteLine("Petit montant");
+
+            foreach (var groupMontant in regrouperContrat)
+            {
+                if (groupMontant.Key)
+                {
+                    foreach (var montant in groupMontant)
+                    {
+                        Console.WriteLine("{0}", montant.dblMontant);
+                    }
+
+                }
+            }
+
+
+            Console.ReadKey();
+            /************************************************************************************/
+
+
+            /*11- Affichez le montant moyen des contrats
+
+            var MoyenneContrat = (from unContrat
+                                 in lstContrats
+                                  select unContrat).Average(contrat => contrat.dblMontant);
+
+            Console.WriteLine("Montant moyen des contrats : " + MoyenneContrat);
+
+            Console.ReadKey();
+
+
+            /************************************************************************************/
+
+
+            //12- Affichez les mêmes informations qu’en 6 mais en utilisant un join ...into. (l’employé doit apparaître une seule fois) (rendu la)
+
+            var employeUneSeulFois = from unEmploye in lstEmployes
+                                         join unContrat in lstContrats
+                                         on unEmploye.intNumero equals unContrat.intNumEmploye
+                                         into lstEmployeContrat
+                                         // Crée un cours vide si l'employé n'a pas de contrat
+                                         //from unContrat in lstEmployeContrat.DefaultIfEmpty(new Contrat())
+                                         select new { unEmploye.strPrenom, unEmploye.strNom, lstEmployeContrat };
+
+            Console.WriteLine("Affichez les mêmes informations qu’en 6 mais en utilisant un join...into. (l’employé doit apparaître une seule fois");
+            foreach (var unEmployeContrat in employeUneSeulFois)
+            {
+                Console.WriteLine("{0}, {1} ", unEmployeContrat.strPrenom, unEmployeContrat.strNom);
+                foreach(var contrat in unEmployeContrat.lstEmployeContrat)
+                {
+                    Console.WriteLine("\t{0}, {1} ", contrat.intNumero, contrat.dblMontant);
+                }
+
+            }
+            Console.ReadKey();
+
+            /************************************************************************************/
+
+            /*13- Utilisez la clause let, pour afficher le numéro, le nom, le prénom d'un employé 
+            //ainsi que le nombre de ses contrats, par ordre décroissant de nombre de contrats.
+
+            var employeContrat = from unEmploye in lstEmployes
+                                 join unContrat in lstContrats
+                                 on unEmploye.intNumero equals unContrat.intNumEmploye
+                                 into lstEmployeContrat
+                                 let nbContrats = lstEmployeContrat.Count()
+                                 orderby nbContrats descending
+                                 select new {nbContrats,unEmploye.strNom,unEmploye.strPrenom,unEmploye.intNumero };
+
+            foreach(var desEmployeContrat in employeContrat)
+            {
+                Console.Write("{0}",desEmployeContrat.nbContrats+" contrats :");
+                Console.WriteLine("{0}: {1}, {2}", desEmployeContrat.intNumero,desEmployeContrat.strPrenom, desEmployeContrat.strNom);
+            }
+            Console.ReadKey();
+
+
+            /************************************************************************************/
+
+            /*14-Affichez la moyenne des montants des contrats par numéro d’employé ayant au moins trois contrats. 
+            var employeContrat = from unEmploye in lstEmployes
+                                 join unContrat in lstContrats
+                                 on unEmploye.intNumero equals unContrat.intNumEmploye
+                                 into lstEmployeContrat
+                                 where lstEmployeContrat.Count() >=3
+                                 let moyenneContrat = lstEmployeContrat.Average(contrat => contrat.dblMontant)
+                                 let nbContrats = lstEmployeContrat.Count()
+                                 select new { moyenneContrat,nbContrats,unEmploye.intNumero};
+
+            foreach(var employeC in employeContrat)
+            {
+              
+                    Console.WriteLine("{0}, {1}", employeC.intNumero, employeC.moyenneContrat);
+                
+             
+            }
+            Console.ReadKey();
+
+
+            /************************************************************************************/
+
+            /*15-Reprendre la question 14 en affichant en plus, le numéro, le nom et le prénom de l’employé.
+
+            var employeContrat = from unEmploye in lstEmployes
+                                 join unContrat in lstContrats
+                                 on unEmploye.intNumero equals unContrat.intNumEmploye
+                                 into lstEmployeContrat
+                                 where lstEmployeContrat.Count() >= 3
+                                 let moyenneContrat = lstEmployeContrat.Average(contrat => contrat.dblMontant)
+                                 let nbContrats = lstEmployeContrat.Count()
+                                 select new { moyenneContrat, nbContrats, unEmploye.intNumero,unEmploye.strPrenom,unEmploye.strNom };
+
+            foreach (var employeC in employeContrat)
+            {
+
+                Console.WriteLine("{0}, {1}, {2}, {3}", employeC.intNumero,employeC.strPrenom,employeC.strNom, employeC.moyenneContrat);
+
+
+            }
+            Console.ReadKey();
+            /************************************************************************************/
+
+            /*16-Affichez le numéro, le nom et le prénom de l’employé ayant le plus gros montant des contrats 
+            //(somme des montants(dblMontants) de tous ses contrats). 
+            //Utilisez la méthode First() sur les collections
+            var employeContrat = from unEmploye in lstEmployes
+                                 join unContrat in lstContrats
+                                 on unEmploye.intNumero equals unContrat.intNumEmploye
+                                 into lstEmployeContrat
+                                 // where lstEmployeContrat.Count() >= 3
+
+                                 //let moyenneContrat = lstEmployeContrat.Average(contrat => contrat.dblMontant)
+
+                                 let SumContrats = lstEmployeContrat.Sum(test => test.dblMontant)
+
+                                 orderby SumContrats descending
+                                      
+                                 select new { unEmploye.intNumero,unEmploye.strNom,unEmploye.strPrenom, SumContrats };
+
+         
+                Console.WriteLine("{0}, {1}, {2}, {3}", employeContrat.First().intNumero, employeContrat.First().strPrenom, employeContrat.First().strNom, employeContrat.First().SumContrats);
+
+
+            
+            Console.ReadKey();
 
 
             /************************************************************************************/
