@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDVoyagesMarrero" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=tcp:424sql.cgodin.qc.ca,5433;Initial Catalog=BDVoyagesMarrero;User ID=5B6Marrero" SettingsObjectName="Labo9.Properties.Settings" SettingsPropertyName="BDVoyagesMarreroConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.client" Member="client">
+    <Type Name="client">
+      <Column Name="cliNo" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cliPrenom" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="cliNom" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cliRue" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="cliVille" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="cliTelephone" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Association Name="client_contrat" Member="contrat" ThisKey="cliNo" OtherKey="cliNo" Type="contrat" />
+      <Association Name="client_faitLeVoyage" Member="faitLeVoyage" ThisKey="cliNo" OtherKey="cliNo" Type="faitLeVoyage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contrat" Member="contrat">
+    <Type Name="contrat">
+      <Column Name="conNo" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="conDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="conAcompte" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="conMontant" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="ConPaye" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="conTypeOcc" Type="System.Decimal" DbType="Decimal(1,0)" CanBeNull="true" />
+      <Column Name="empNo" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="voyNo" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="cliNo" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Association Name="contrat_faitLeVoyage" Member="faitLeVoyage" ThisKey="conNo" OtherKey="conNo" Type="faitLeVoyage" />
+      <Association Name="client_contrat" Member="client" ThisKey="cliNo" OtherKey="cliNo" Type="client" IsForeignKey="true" />
+      <Association Name="employe_contrat" Member="employe" ThisKey="empNo" OtherKey="empNo" Type="employe" IsForeignKey="true" />
+      <Association Name="voyage_contrat" Member="voyage" ThisKey="voyNo" OtherKey="voyNo" Type="voyage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employe" Member="employe">
+    <Type Name="employe">
+      <Column Name="empNo" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="empPrenom" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="empNom" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="empEmploi" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="empSal" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="empComm" Type="System.Decimal" DbType="Decimal(3,3)" CanBeNull="true" />
+      <Column Name="empSup" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="empBureau" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Association Name="employe_contrat" Member="contrat" ThisKey="empNo" OtherKey="empNo" Type="contrat" />
+      <Association Name="employe_voyage" Member="voyage" ThisKey="empNo" OtherKey="empNo" Type="voyage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.faitLeVoyage" Member="faitLeVoyage">
+    <Type Name="faitLeVoyage">
+      <Column Name="conNo" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cliNo" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="client_faitLeVoyage" Member="client" ThisKey="cliNo" OtherKey="cliNo" Type="client" IsForeignKey="true" />
+      <Association Name="contrat_faitLeVoyage" Member="contrat" ThisKey="conNo" OtherKey="conNo" Type="contrat" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hotel" Member="hotel">
+    <Type Name="hotel">
+      <Column Name="hotNo" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hotNom" Type="System.String" DbType="Char(25)" CanBeNull="true" />
+      <Column Name="hotCote" Type="System.Decimal" DbType="Decimal(1,0)" CanBeNull="true" />
+      <Column Name="hotPiscine" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="hotNbChambreTot" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Association Name="hotel_voyage" Member="voyage" ThisKey="hotNo" OtherKey="hotno" Type="voyage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.voyage" Member="voyage">
+    <Type Name="voyage">
+      <Column Name="voyNo" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="voyDestination" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="voyDateDepart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="voyDateArrive" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="voyRepas" Type="System.Decimal" DbType="Decimal(1,0)" CanBeNull="true" />
+      <Column Name="voyNbPlace" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="voyActivite" Type="System.String" DbType="Char(76)" CanBeNull="true" />
+      <Column Name="empNo" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="hotno" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="tarifSimple" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="tarifDouble" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="tarifTriple" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="tarifQuadruple" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="NbChambreRes" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Association Name="voyage_contrat" Member="contrat" ThisKey="voyNo" OtherKey="voyNo" Type="contrat" />
+      <Association Name="employe_voyage" Member="employe" ThisKey="empNo" OtherKey="empNo" Type="employe" IsForeignKey="true" />
+      <Association Name="hotel_voyage" Member="hotel" ThisKey="hotno" OtherKey="hotNo" Type="hotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
