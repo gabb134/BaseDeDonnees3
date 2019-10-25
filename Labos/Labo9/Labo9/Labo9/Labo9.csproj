@@ -81,6 +81,7 @@
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
     <None Include="Properties\DataSources\client.datasource" />
+    <None Include="Properties\DataSources\contrat.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
