@@ -10,5 +10,11 @@ namespace Labo10
     {
         public decimal noClient { get; private set; }
         public String nomCompletClient { get; private set; }
+
+        public NoEtNomClient(decimal noClient, string nomCompletClient)
+        {
+            this.noClient = noClient;
+            this.nomCompletClient = nomCompletClient;
+        }
     }
 }

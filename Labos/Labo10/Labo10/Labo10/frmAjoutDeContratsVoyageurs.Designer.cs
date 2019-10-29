@@ -36,7 +36,7 @@
             this.nudAcompte = new System.Windows.Forms.NumericUpDown();
             this.nudMontant = new System.Windows.Forms.NumericUpDown();
             this.nudPaye = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudNbPlaces = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,14 +49,19 @@
             this.noEtDestinationVoyageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboClient = new System.Windows.Forms.ComboBox();
             this.noEtNomClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnEnregistrer = new System.Windows.Forms.Button();
+            this.lstVoyageurs = new System.Windows.Forms.ListBox();
+            this.noEtNomClientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errMessage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAcompte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMontant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaye)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNbPlaces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomEmployeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtDestinationVoyageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomClientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noEtNomClientBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -178,23 +183,23 @@
             0});
             this.nudPaye.Validating += new System.ComponentModel.CancelEventHandler(this.nudPaye_Validating);
             // 
-            // numericUpDown1
+            // nudNbPlaces
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(181, 207);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudNbPlaces.Location = new System.Drawing.Point(181, 207);
+            this.nudNbPlaces.Maximum = new decimal(new int[] {
             4,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.nudNbPlaces.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(200, 20);
-            this.numericUpDown1.TabIndex = 9;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudNbPlaces.Name = "nudNbPlaces";
+            this.nudNbPlaces.Size = new System.Drawing.Size(200, 20);
+            this.nudNbPlaces.TabIndex = 9;
+            this.nudNbPlaces.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -286,7 +291,7 @@
             this.cboVoyage.Name = "cboVoyage";
             this.cboVoyage.Size = new System.Drawing.Size(200, 21);
             this.cboVoyage.TabIndex = 14;
-            this.cboVoyage.ValueMember = "destinationVoyage";
+            this.cboVoyage.ValueMember = "noVoyage";
             // 
             // noEtDestinationVoyageBindingSource
             // 
@@ -308,18 +313,59 @@
             // 
             this.noEtNomClientBindingSource.DataSource = typeof(Labo10.NoEtNomClient);
             // 
+            // btnEnregistrer
+            // 
+            this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnregistrer.Location = new System.Drawing.Point(181, 418);
+            this.btnEnregistrer.Name = "btnEnregistrer";
+            this.btnEnregistrer.Size = new System.Drawing.Size(429, 34);
+            this.btnEnregistrer.TabIndex = 16;
+            this.btnEnregistrer.Text = "Enregistrer ce contrat et les voyageurs séléctionnées";
+            this.btnEnregistrer.UseVisualStyleBackColor = true;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
+            // 
+            // lstVoyageurs
+            // 
+            this.lstVoyageurs.DataSource = this.noEtNomClientBindingSource1;
+            this.lstVoyageurs.DisplayMember = "nomCompletClient";
+            this.lstVoyageurs.FormattingEnabled = true;
+            this.lstVoyageurs.Location = new System.Drawing.Point(545, 55);
+            this.lstVoyageurs.Name = "lstVoyageurs";
+            this.lstVoyageurs.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lstVoyageurs.Size = new System.Drawing.Size(249, 342);
+            this.lstVoyageurs.TabIndex = 17;
+            this.lstVoyageurs.ValueMember = "noClient";
+            this.lstVoyageurs.Validating += new System.ComponentModel.CancelEventHandler(this.lstVoyageurs_Validating);
+            // 
+            // noEtNomClientBindingSource1
+            // 
+            this.noEtNomClientBindingSource1.DataSource = typeof(Labo10.NoEtNomClient);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(541, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Voyageurs:\r\n";
+            // 
             // frmAjoutDeContratsVoyageurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 450);
+            this.ClientSize = new System.Drawing.Size(844, 475);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lstVoyageurs);
+            this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.cboClient);
             this.Controls.Add(this.cboVoyage);
             this.Controls.Add(this.cboEmploye);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nudNbPlaces);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.nudPaye);
             this.Controls.Add(this.nudMontant);
@@ -336,10 +382,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAcompte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMontant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaye)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNbPlaces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomEmployeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtDestinationVoyageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomClientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noEtNomClientBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,7 +401,7 @@
         private System.Windows.Forms.NumericUpDown nudPaye;
         private System.Windows.Forms.NumericUpDown nudMontant;
         private System.Windows.Forms.NumericUpDown nudAcompte;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudNbPlaces;
         private System.Windows.Forms.ComboBox cboEmploye;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -367,6 +414,10 @@
         private System.Windows.Forms.BindingSource noEtNomClientBindingSource;
         private System.Windows.Forms.BindingSource noEtDestinationVoyageBindingSource;
         private System.Windows.Forms.BindingSource noEtNomEmployeBindingSource;
+        private System.Windows.Forms.Button btnEnregistrer;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListBox lstVoyageurs;
+        private System.Windows.Forms.BindingSource noEtNomClientBindingSource1;
     }
 }
 
