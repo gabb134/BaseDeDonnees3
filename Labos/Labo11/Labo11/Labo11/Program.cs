@@ -71,7 +71,7 @@ namespace Labo11
 
             /*********************************************************/
 
-            //d) Même question qu’en c), mais regroupés par la 1ère lettre
+            /*d) Même question qu’en c), mais regroupés par la 1ère lettre
             //du nom de famille en ordre de 1ère lettre du nom de famille
             //puis de nom de famille puis de prénom. 
 
@@ -89,7 +89,6 @@ namespace Labo11
                                                                select premiereLettreNomFamille ;
 
 
-
             Console.WriteLine("requête D");
 
             foreach (var premiereLettre in tousLesPrenomNomsFamilleEnseignentsParLettre)
@@ -103,7 +102,50 @@ namespace Labo11
             }
 
             Console.ReadKey();
-            /*********************************************************/
+
+
+
+            /*********************************************************/
+
+            /*e) Même question qu’en d), mais en plus, on affiche le nom
+            //du département(suggestion : le faire en deux requêtes
+            //imbriquées). 
+            var tousLesPrenomNomsFamilleEnseignentsParLettreEtDept = from unCollege in docCollege.Elements("college")
+                                                                     from unDepartement in unCollege.Elements("departement")
+                                                                     from unEnseignant in unDepartement.Elements("enseignant")
+                                                                     from nom in unEnseignant.Elements("nom")
+                                                                     from prenom in unEnseignant.Elements("prenom")
+                                                                     let nomFamille = nom.Value
+                                                                     let nomComplet = prenom.Value + " " + nom.Value
+                                                                     let nomDept = unDepartement.Attribute("nom").Value
+                                                                     orderby nomFamille[0], nomFamille, prenom.Value
+                                                                     group new { nomComplet,nomDept } by nomFamille[0]
+                                                                         into premiereLettreNomFamille
+                                                                     select premiereLettreNomFamille ;
+                                                                        
+                                                             
+                                                                     
+                                                                     
+                                                                     
+
+
+            Console.WriteLine("requête E");
+
+            foreach (var premiereLettre in tousLesPrenomNomsFamilleEnseignentsParLettreEtDept)
+            {
+                Console.WriteLine(premiereLettre.Key);
+
+                foreach (var nomComplet in premiereLettre)
+                {
+                    Console.WriteLine("{0} ---- {1}",nomComplet.nomComplet,nomComplet.nomDept);
+                }
+            }
+
+            Console.ReadKey();
+
+            /*********************************************************/
+
+            //
         }
     }
 }

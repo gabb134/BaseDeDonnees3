@@ -76,7 +76,7 @@ namespace demoLinqToXml
                // ***********************************************************************************/
 
             
-           //
+           /*
             // 6- Tous les types de menus
             XDocument docResto = XDocument.Load("RestoAvecMenuDuJour.xml");
             var TousLesTypesDeMenus = from unResto in docResto.Elements("restaurant")
