@@ -52,7 +52,7 @@ namespace Labo11
 
             /*********************************************************/
 
-            //c) Le prénom et le nom de famille de tous les enseignants.
+            /*c) Le prénom et le nom de famille de tous les enseignants.
 
             var tousLesPrenomNomsFamilleEnseignents = from unCollege in docCollege.Elements("college")
                                                       from unDepartement in unCollege.Elements("departement")
@@ -70,6 +70,40 @@ namespace Labo11
             Console.ReadKey();
 
             /*********************************************************/
+
+            //d) Même question qu’en c), mais regroupés par la 1ère lettre
+            //du nom de famille en ordre de 1ère lettre du nom de famille
+            //puis de nom de famille puis de prénom. 
+
+
+            var tousLesPrenomNomsFamilleEnseignentsParLettre = from unCollege in docCollege.Elements("college")
+                                                               from unDepartement in unCollege.Elements("departement")
+                                                               from unEnseignant in unDepartement.Elements("enseignant")
+                                                               from nom in unEnseignant.Elements("nom")
+                                                               from prenom in unEnseignant.Elements("prenom")
+                                                               let nomFamille = nom.Value
+                                                               let nomComplet = prenom.Value + " " + nom.Value
+                                                               orderby nomFamille[0], nomFamille, prenom.Value
+                                                               group nomComplet by nomFamille[0]
+                                                               into premiereLettreNomFamille
+                                                               select premiereLettreNomFamille ;
+
+
+
+            Console.WriteLine("requête D");
+
+            foreach (var premiereLettre in tousLesPrenomNomsFamilleEnseignentsParLettre)
+            {
+               Console.WriteLine( premiereLettre.Key);
+
+                foreach(var nomComplet in premiereLettre)
+                {
+                    Console.WriteLine(nomComplet);
+                }
+            }
+
+            Console.ReadKey();
+            /*********************************************************/
         }
     }
 }
