@@ -153,23 +153,38 @@ namespace Labo11
                                from unDepartement in unCollege.Elements("departement")
                                from unEnseignant in unDepartement.Elements("enseignant")
 
+
+
+
                                group unEnseignant by unDepartement
                                into enseignantDansDepartement
 
                                let noDept = enseignantDansDepartement.Key.Attribute("no").Value
                                let nbEnseignantDansDept = enseignantDansDepartement.Count()
-                               let moyenneAnciennete = ()
-                               //let moyenneAnciennete = unEnseignant.Element("anciennete")
+                               let moyenneAnciennete = (from unCollege in docCollege.Elements("college")
+                                                        from unDepartement in unCollege.Elements("departement")
+                                                        from unEnseignant in unDepartement.Elements("enseignant")
+                                                        from aciennete in unEnseignant.Elements("anciennete")
 
-                               select enseignantDansDepartement ;
+                                                        orderby (int)unDepartement.Attribute("no")
+                                                        group (double)aciennete by unDepartement
+                                                            into enseignantDansDepartement
+
+                                                        select enseignantDansDepartement.Average())
+
+                               select new { moyenneAnciennete,noDept,nbEnseignantDansDept };
+                                                        
+                        
+
+                              
 
             Console.WriteLine("requête F");
-
+            int intcompt = 0;
             foreach(var dept in departements)
             {
 
-                Console.WriteLine();
-               
+                Console.WriteLine("Le dép. "+dept.noDept+" a "+dept.nbEnseignantDansDept+" profs avec un acienneté moyenne de  "+dept.moyenneAnciennete.ElementAt(intcompt));
+                intcompt++;
             }
             Console.ReadKey();
 
