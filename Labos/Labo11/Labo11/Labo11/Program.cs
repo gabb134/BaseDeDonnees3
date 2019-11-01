@@ -23,7 +23,7 @@ namespace Labo11
                                      select unDepartement.Attribute("nom");
 
 
-            Console.WriteLine("requete A");
+            Console.WriteLine("requête A");
 
             foreach (XAttribute unNomDepartement in tousLesNomsDepartement)
                 Console.WriteLine(unNomDepartement);
@@ -37,12 +37,12 @@ namespace Labo11
 
             var tousLesElementsNoEmploye = from unCollege in docCollege.Elements("college")
                                            from unDepartement in unCollege.Elements("departement")
-                                           from unEnseignent in unDepartement.Elements("enseignant")
-                                           from unEMploye in unEnseignent.Elements("noemploye")
+                                           from unEnseignant in unDepartement.Elements("enseignant")
+                                           from unEMploye in unEnseignant.Elements("noemploye")
                                            orderby (int)unEMploye 
                                            select unEMploye;
 
-            Console.WriteLine("requete B");
+            Console.WriteLine("requête B");
 
             foreach (var unNoEmploye in tousLesElementsNoEmploye)
                 Console.WriteLine(unNoEmploye);
@@ -54,10 +54,22 @@ namespace Labo11
 
             //c) Le prénom et le nom de famille de tous les enseignants.
 
-            var tousLesPrenomNomsFamilleEnseignents = 
+            var tousLesPrenomNomsFamilleEnseignents = from unCollege in docCollege.Elements("college")
+                                                      from unDepartement in unCollege.Elements("departement")
+                                                      from unEnseignant in unDepartement.Elements("enseignant")
+                                                      from nom in unEnseignant.Elements("nom")
+                                                      from prenom in unEnseignant.Elements("prenom")
+                                                      select new {nom,prenom };
 
 
-           /*********************************************************/
+            Console.WriteLine("requête C");
+
+            foreach (var nomPrenom in tousLesPrenomNomsFamilleEnseignents)
+                Console.WriteLine(nomPrenom.prenom.Value + " " + nomPrenom.nom.Value);
+
+            Console.ReadKey();
+
+            /*********************************************************/
         }
     }
 }
