@@ -32,13 +32,15 @@ namespace Labo11
 
 
             /*********************************************************/
-            //b) Tous les éléments « noemploye » qu’il y a dans le
+            /*b) Tous les éléments « noemploye » qu’il y a dans le
             //collège en ordre de numéro d’employé.
 
             var tousLesElementsNoEmploye = from unCollege in docCollege.Elements("college")
                                            from unDepartement in unCollege.Elements("departement")
                                            from unEnseignent in unDepartement.Elements("enseignant")
-                                           select unEnseignent.Elements("noemploye");
+                                           from unEMploye in unEnseignent.Elements("noemploye")
+                                           orderby (int)unEMploye 
+                                           select unEMploye;
 
             Console.WriteLine("requete B");
 
@@ -50,6 +52,12 @@ namespace Labo11
 
             /*********************************************************/
 
+            //c) Le prénom et le nom de famille de tous les enseignants.
+
+            var tousLesPrenomNomsFamilleEnseignents = 
+
+
+           /*********************************************************/
         }
     }
 }
