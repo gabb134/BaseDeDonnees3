@@ -145,7 +145,36 @@ namespace Labo11
 
             /*********************************************************/
 
-            //
+            //f) Pour chaque département, affichez, par ordre de no du département, le no du
+            //département, son nombre d’enseignants ainsi que la moyenne des
+            //anciennetés.
+
+            var departements = from unCollege in docCollege.Elements("college")
+                               from unDepartement in unCollege.Elements("departement")
+                               from unEnseignant in unDepartement.Elements("enseignant")
+
+                               group unEnseignant by unDepartement
+                               into enseignantDansDepartement
+
+                               let noDept = enseignantDansDepartement.Key.Attribute("no").Value
+                               let nbEnseignantDansDept = enseignantDansDepartement.Count()
+                               let moyenneAnciennete = ()
+                               //let moyenneAnciennete = unEnseignant.Element("anciennete")
+
+                               select enseignantDansDepartement ;
+
+            Console.WriteLine("requête F");
+
+            foreach(var dept in departements)
+            {
+
+                Console.WriteLine();
+               
+            }
+            Console.ReadKey();
+
+
+            /*********************************************************/
         }
     }
 }
