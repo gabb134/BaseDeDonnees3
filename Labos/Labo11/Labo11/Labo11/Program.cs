@@ -109,7 +109,8 @@ namespace Labo11
 
             /*e) Même question qu’en d), mais en plus, on affiche le nom
             //du département(suggestion : le faire en deux requêtes
-            //imbriquées). 
+            //imbriquées). 
+
             var tousLesPrenomNomsFamilleEnseignentsParLettreEtDept = from unCollege in docCollege.Elements("college")
                                                                      from unDepartement in unCollege.Elements("departement")
                                                                      from unEnseignant in unDepartement.Elements("enseignant")
@@ -145,7 +146,7 @@ namespace Labo11
 
             /*********************************************************/
 
-            //f) Pour chaque département, affichez, par ordre de no du département, le no du
+            /*f) Pour chaque département, affichez, par ordre de no du département, le no du
             //département, son nombre d’enseignants ainsi que la moyenne des
             //anciennetés.
 
@@ -188,6 +189,49 @@ namespace Labo11
             }
             Console.ReadKey();
 
+
+            /*********************************************************/
+
+            //g) Affichez le numéro d’employé, le nom, le prénom, l’ancienneté ainsi que le
+            //département de l’enseignant le plus ancien du collège. 
+            var departementsPlusAncien = from unCollege in docCollege.Elements("college")
+                               from unDepartement in unCollege.Elements("departement")
+                               from unEnseignant in unDepartement.Elements("enseignant")
+
+
+
+
+                               group unEnseignant by unDepartement
+                              into enseignantDansDepartement
+
+                               let noDept = enseignantDansDepartement.Key.Attribute("no").Value
+                               let nbEnseignantDansDept = enseignantDansDepartement.Count()
+                               let moyenneAnciennete = (from unCollege in docCollege.Elements("college")
+                                                        from unDepartement in unCollege.Elements("departement")
+                                                        from unEnseignant in unDepartement.Elements("enseignant")
+                                                        from aciennete in unEnseignant.Elements("anciennete")
+
+                                                        orderby (int)unDepartement.Attribute("no")
+                                                        group (double)aciennete by unDepartement
+                                                            into enseignantDansDepartement
+
+                                                        select enseignantDansDepartement.Average())
+
+                               select new { moyenneAnciennete, noDept, nbEnseignantDansDept };
+
+
+
+
+
+            Console.WriteLine("requête F");
+            int intcompt = 0;
+            foreach (var dept in departementsPlusAncien)
+            {
+
+                Console.WriteLine("Le dép. " + dept.noDept + " a " + dept.nbEnseignantDansDept + " profs avec un acienneté moyenne de  " + dept.moyenneAnciennete.ElementAt(intcompt));
+                intcompt++;
+            }
+            Console.ReadKey();
 
             /*********************************************************/
         }
