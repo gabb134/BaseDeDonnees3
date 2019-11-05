@@ -206,8 +206,8 @@ namespace demoLinqToXml
              Console.ReadKey();
               // ***********************************************************************************/
 
-           /*
-                  // 12- Augmentez le prix de 10% de tous les menus
+           
+                  /* 12- Augmentez le prix de 10% de tous les menus
                   XDocument docResto = XDocument.Load("RestoAvecMenuDuJour.xml");
                   var TousLesMenus =
                       from unResto in docResto.Elements("restaurant")
@@ -223,8 +223,8 @@ namespace demoLinqToXml
                  // ***********************************************************************************/
 
             
-              //13- Supprimer le poulet au curry du menu gatronomique
-            /*
+              /*13- Supprimer le poulet au curry du menu gatronomique
+            
               XDocument docResto = XDocument.Load("RestoAvecMenuDuJour.xml");
               var ElementPouletAuCurry =
                   from unMenu in docResto.Descendants("menu")
@@ -240,7 +240,7 @@ namespace demoLinqToXml
               docResto.Save("RestoSansPouletAuCurry.xml");   
               // ***********************************************************************************/
 
-            /*
+            
             // 14- Ajouter un canard à l'orange de 700 calories dans les plats du menu gastronomqiue
             XDocument docResto = XDocument.Load("RestoAvecMenuDuJour.xml");
             var ElementPlatsMenuGastronomique =
